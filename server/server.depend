@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1379430784 source:/data/coolbreeze/Programming/carnivores_2/carncollect/server/Server.cpp
+	<iostream>
+	<vector>
+	<string>
+	<Windows.h>
+	<WinSock2.h>
+	<Ws2tcpip.h>
+	<pthread.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<memory.h>
+	<stdio.h>
+	<unistd.h>
+	<errno.h>
+

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="engine" />
+		<Option platforms="Windows;Unix;" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="Game/;Audio/;AI/;Graphics/;Resources/;STD/;Network/;" />
+		<Build>
+			<Target title="Debug-Nix">
+				<Option platforms="Unix;" />
+				<Option output="../game/carnivores2_d" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../game/" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="prj=HUNTDAT/AREAS/AREA2 din=8 wep=255 dtm=1 -radar -double -debug -supply -window" />
+				<Compiler>
+					<Add option="-Wextra" />
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add option="-DAF_DEBUG" />
+					<Add option="-DAF_PLATFORM_LINUX" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+					<Add option="-lrt" />
+					<Add option="-lGLEW" />
+					<Add option="-lglfw" />
+					<Add option="-lGLU" />
+					<Add option="-lGL" />
+					<Add option="-lX11" />
+					<Add option="-lasound" />
+					<Add option="-lopenal" />
+				</Linker>
+			</Target>
+			<Target title="Release-Nix">
+				<Option platforms="Unix;" />
+				<Option output="../game/carnivores2" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../game/" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option parameters="prj=HUNTDAT/AREAS/AREA2 din=8 wep=255 dtm=0 -radar -double -debug -supply -window" />
+				<Compiler>
+					<Add option="-DAF_RELEASE" />
+					<Add option="-DAF_NDEBUG" />
+					<Add option="-DAF_PLATFORM_LINUX" />
+				</Compiler>
+				<Linker>
+					<Add option="-lrt" />
+					<Add option="-lGLEW" />
+					<Add option="-lglfw" />
+					<Add option="-lGLU" />
+					<Add option="-lGL" />
+					<Add option="-lX11" />
+					<Add option="-lasound" />
+					<Add option="-lopenal" />
+				</Linker>
+			</Target>
+			<Target title="Debug-Win">
+				<Option platforms="Windows;" />
+				<Option output="../Game/Carnivores2_debug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../Game/" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="prj=HUNTDAT/AREAS/AREA2 din=8 wep=255 dtm=0 -radar -double -debug -supply -window" />
+				<Compiler>
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add option="-DAF_DEBUG" />
+					<Add option="-DAF_PLATFORM_WINDOWS" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg -lgmon" />
+					<Add option="-pg" />
+					<Add option="-lgdi32" />
+					<Add option="-lglew32s" />
+					<Add option="-lglfw" />
+					<Add option="-lopengl32" />
+					<Add option="-lglu32" />
+					<Add option="-lopenal32" />
+				</Linker>
+			</Target>
+			<Target title="Release-Win">
+				<Option platforms="Windows;" />
+				<Option output="../Game/Carnivores2" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../Game/" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="prj=HUNTDAT/AREAS/AREA2 din=8 wep=255 dtm=0 w=1600 h=900 -radar -double -debug -supply -window" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-DAF_PLATFORM_WINDOWS" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+					<Add option="-lgdi32" />
+					<Add option="-lglew32s" />
+					<Add option="-lglfw" />
+					<Add option="-lopengl32" />
+					<Add option="-lglu32" />
+					<Add option="-lopenal32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="AI.h">
+			<Option virtualFolder="AI/" />
+		</Unit>
+		<Unit filename="AIBase.hpp">
+			<Option virtualFolder="AI/" />
+		</Unit>
+		<Unit filename="AIIguanodon.hpp">
+			<Option virtualFolder="AI/" />
+		</Unit>
+		<Unit filename="Audio.cpp">
+			<Option virtualFolder="Audio/" />
+		</Unit>
+		<Unit filename="AudioAL.cpp">
+			<Option virtualFolder="Audio/" />
+		</Unit>
+		<Unit filename="AudioAL.h">
+			<Option virtualFolder="Audio/" />
+		</Unit>
+		<Unit filename="AudioALSA.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+			<Option virtualFolder="Audio/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="AudioDriver.h">
+			<Option virtualFolder="Audio/" />
+		</Unit>
+		<Unit filename="AudioMM.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+			<Option virtualFolder="Audio/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="AudioSoft.h">
+			<Option virtualFolder="Audio/" />
+		</Unit>
+		<Unit filename="Characters.cpp">
+			<Option virtualFolder="AI/" />
+		</Unit>
+		<Unit filename="Controller.h">
+			<Option virtualFolder="Game/" />
+		</Unit>
+		<Unit filename="Game.cpp">
+			<Option virtualFolder="Game/" />
+		</Unit>
+		<Unit filename="Globals.h" />
+		<Unit filename="Hunt.h" />
+		<Unit filename="Hunt2.cpp">
+			<Option virtualFolder="Game/" />
+		</Unit>
+		<Unit filename="ImageTypes.h" />
+		<Unit filename="IniFile.cpp" />
+		<Unit filename="IniFile.h" />
+		<Unit filename="Interface.cpp" />
+		<Unit filename="Log.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Netcode.cpp">
+			<Option virtualFolder="Network/" />
+		</Unit>
+		<Unit filename="Network.cpp">
+			<Option virtualFolder="Network/" />
+		</Unit>
+		<Unit filename="Platform.h">
+			<Option virtualFolder="Resources/" />
+		</Unit>
+		<Unit filename="RenderGL.cpp">
+			<Option virtualFolder="Graphics/" />
+		</Unit>
+		<Unit filename="Resources.cpp" />
+		<Unit filename="VideoOptions.h">
+			<Option virtualFolder="Graphics/" />
+		</Unit>
+		<Unit filename="action.ico">
+			<Option virtualFolder="Resources/" />
+		</Unit>
+		<Unit filename="afstring.h">
+			<Option virtualFolder="STD/" />
+		</Unit>
+		<Unit filename="gl_extra.cpp">
+			<Option virtualFolder="Graphics/" />
+		</Unit>
+		<Unit filename="gl_extra.h">
+			<Option virtualFolder="Graphics/" />
+		</Unit>
+		<Unit filename="gl_shaders.h">
+			<Option virtualFolder="Graphics/" />
+		</Unit>
+		<Unit filename="mathematics.cpp">
+			<Option virtualFolder="STD/" />
+		</Unit>
+		<Unit filename="resource.h">
+			<Option virtualFolder="Resources/" />
+		</Unit>
+		<Unit filename="text[EN].txt">
+			<Option virtualFolder="Resources/" />
+		</Unit>
+		<Unit filename="text[RU].txt">
+			<Option virtualFolder="Resources/" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

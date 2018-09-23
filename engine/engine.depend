@@ -1,0 +1,1121 @@
+# depslib dependency file v1.0
+1280995819 source:c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\audio_dll.cpp
+	<windows.h>
+
+1379976034 >
+
+1280876826 source:c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\characters.cpp
+	"Hunt.h"
+	"stdio.h"
+
+1380425804 
+
+1282203372 c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\hunt.h
+	<math.h>
+	<windows.h>
+	<winuser.h>
+	"resource.h"
+	<ddraw.h>
+
+936272098 c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\resource.h
+
+1282223901 source:c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\game.cpp
+	"Hunt.h"
+	<stdio.h>
+
+1282224391 source:c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\hunt2.cpp
+	"Hunt.h"
+	"stdio.h"
+	"Controller.h"
+
+1380376398 r.h"
+
+1282176857 c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\controller.h
+	<XInput.h>
+
+1282747180 source:c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\interface.cpp
+	"Hunt.h"
+	"stdio.h"
+
+1282747181 source:c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\renderd3d.cpp
+	"Hunt.h"
+	"stdio.h"
+	<d3d9.h>
+	<d3dx9.h>
+
+1282747181 source:c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\rendersoft.cpp
+	"Hunt.h"
+	"stdio.h"
+	"RenderASM.cpp"
+
+1282747181 .cpp"
+
+1120132278 c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\renderasm.cpp
+
+1280587729 source:c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\resource.rc
+	"resource.h"
+
+1380426767 h"
+
+1282175974 source:c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\mathematics.cpp
+	"Hunt.h"
+
+1282294303 source:c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\rendergl.cpp
+	"Hunt.h"
+	<stdio.h>
+	<gl/gl.h>
+	<gl/glu.h>
+	<gl/glext.h>
+
+1379464404 h>
+
+1282203326 source:c:\documents and settings\nc6220\my documents\c projects\carn2_src 2010\engine\resources.cpp
+	"Hunt.h"
+	"stdio.h"
+
+1293090982 source:c:\users\james\documents\c projects\carn2_src 2010\engine\audio_dll.cpp
+	<windows.h>
+
+1293441525 source:c:\users\james\documents\c projects\carn2_src 2010\engine\characters.cpp
+	"Hunt.h"
+	"stdio.h"
+
+1300167691 c:\users\james\documents\c projects\carn2_src 2010\engine\hunt.h
+	<math.h>
+	<windows.h>
+	<winuser.h>
+	"resource.h"
+
+936272098 c:\users\james\documents\c projects\carn2_src 2010\engine\resource.h
+
+1299033429 source:c:\users\james\documents\c projects\carn2_src 2010\engine\game.cpp
+	"Hunt.h"
+	<stdio.h>
+
+1299032720 source:c:\users\james\documents\c projects\carn2_src 2010\engine\hunt2.cpp
+	"Hunt.h"
+	"stdio.h"
+	"Controller.h"
+
+1295001536 c:\users\james\documents\c projects\carn2_src 2010\engine\controller.h
+	<C:\DX9September\Include\XInput.h>
+
+1295001536 tember\Include\XInput.h>
+
+1282747182 source:c:\users\james\documents\c projects\carn2_src 2010\engine\interface.cpp
+	"Hunt.h"
+	"stdio.h"
+
+1299371790 source:c:\users\james\documents\c projects\carn2_src 2010\engine\resources.cpp
+	"Hunt.h"
+	"stdio.h"
+
+1293176463 source:c:\users\james\documents\c projects\carn2_src 2010\engine\mathematics.cpp
+	"Hunt.h"
+
+1293089201 source:c:\users\james\documents\c projects\carn2_src 2010\engine\resource.rc
+	"resource.h"
+
+1300167596 source:c:\users\james\documents\c projects\carn2_src 2010\engine\rendergl.cpp
+	"Hunt.h"
+	<stdio.h>
+	<gl/gl.h>
+	<gl/glu.h>
+	<gl/glext.h>
+
+1299373418 source:c:\users\james\documents\c projects\carn2_src 2010\engine\menu.cpp
+	"Hunt.h"
+
+1346666082 source:c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\audio_dll.cpp
+	<windows.h>
+
+1346666082 source:c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\characters.cpp
+	"Hunt.h"
+	"stdio.h"
+
+1346810944 c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\hunt.h
+	<math.h>
+	<windows.h>
+	<winuser.h>
+	<ddraw.h>
+	"resource.h"
+
+1346666083 c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\resource.h
+
+1346756390 source:c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\hunt2.cpp
+	"Hunt.h"
+	"stdio.h"
+	"Controller.h"
+
+1346756390 c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\controller.h
+	<XInput.h>
+
+1346756390 source:c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\interface.cpp
+	"Hunt.h"
+	"stdio.h"
+
+1346666083 source:c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\menu.cpp
+	"Hunt.h"
+
+1346811247 source:c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\game.cpp
+	"Hunt.h"
+	<stdio.h>
+
+1346811498 source:c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\rendergl.cpp
+	"gl_extra.h"
+	<stdio.h>
+	<vector>
+
+1346760489 c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\gl_extra.h
+	"Hunt.h"
+	<assert.h>
+	<Windows.h>
+	<gl\glew.h>
+	<gl\wglew.h>
+
+1346666083 source:c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\resources.cpp
+	"Hunt.h"
+	"stdio.h"
+
+1346666083 source:c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\mathematics.cpp
+	"Hunt.h"
+
+1346666083 source:c:\users\user\documents\visual studio 2010\projects\carnivores_2\engine\resource.rc
+	"resource.h"
+
+1361008224 source:/media/Data/james/Programming/carnivores_2/engine/Audio_DLL.cpp
+	<stdint.h>
+	<windows.h>
+
+1361026210 source:/media/Data/james/Programming/carnivores_2/engine/Characters.cpp
+	"Hunt.h"
+	<stdio.h>
+	"AI.h"
+
+1361028518 /media/Data/james/Programming/carnivores_2/engine/Hunt.h
+	<math.h>
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+	"glew/glew.h"
+	"glew/glxew.h"
+	"../../glfw/include/GL/glfw.h"
+	"Globals.h"
+	"ImageTypes.h"
+	"resource.h"
+	"AI.h"
+
+1342361889 /media/Data/james/Programming/glfw/include/GL/glfw.h
+	<OpenGL/gl3.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL3/gl3.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1360805334 /media/Data/james/Programming/carnivores_2/engine/Globals.h
+
+1346666084 /media/Data/james/Programming/carnivores_2/engine/resource.h
+
+1355893675 /media/Data/james/Programming/carnivores_2/engine/AI.h
+
+1361028611 source:/media/Data/james/Programming/carnivores_2/engine/Game.cpp
+	"Hunt.h"
+	<stdio.h>
+	<time.h>
+	<string.h>
+
+1361033279 source:/media/Data/james/Programming/carnivores_2/engine/Hunt2.cpp
+	"Hunt.h"
+	<stdio.h>
+	"VideoOptions.h"
+	"IniFile.h"
+	<math.h>
+	<time.h>
+	<stdint.h>
+	<string.h>
+	"Log.h"
+	"Controller.h"
+
+1347934840 /media/Data/james/Programming/carnivores_2/engine/VideoOptions.h
+
+1360803506 /media/Data/james/Programming/carnivores_2/engine/IniFile.h
+	<string>
+	<vector>
+
+1360809051 /media/Data/james/Programming/carnivores_2/engine/Log.h
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+
+1360804926 /media/Data/james/Programming/carnivores_2/engine/Controller.h
+	<XInput.h>
+
+1360809931 source:/media/Data/james/Programming/carnivores_2/engine/IniFile.cpp
+	"IniFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1344268747 /media/Data/james/Programming/carnivores_2/engine/glew/glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1344268747 /media/Data/james/Programming/carnivores_2/engine/glew/glxew.h
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/Xmd.h>
+	<GL/glew.h>
+
+1361016026 /media/Data/james/Programming/carnivores_2/engine/ImageTypes.h
+	<stdint.h>
+
+1361028123 source:/media/Data/james/Programming/carnivores_2/engine/Interface.cpp
+	"Hunt.h"
+	<stdio.h>
+	<string.h>
+	<assert.h>
+
+1346666084 source:/media/Data/james/Programming/carnivores_2/engine/Menu.cpp
+	"Hunt.h"
+
+1360811865 source:/media/Data/james/Programming/carnivores_2/engine/Netcode.cpp
+	"Hunt.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<vector>
+
+1361033449 source:/media/Data/james/Programming/carnivores_2/engine/RenderGL.cpp
+	"IniFile.h"
+	"gl_extra.h"
+	"Platform.h"
+	<stdio.h>
+	<vector>
+
+1360814127 /media/Data/james/Programming/carnivores_2/engine/gl_extra.h
+	"Hunt.h"
+	<assert.h>
+	<stdio.h>
+	"VideoOptions.h"
+
+1364419976 ons.h"
+
+1361031715 source:/media/Data/james/Programming/carnivores_2/engine/Resources.cpp
+	"Hunt.h"
+	<stdio.h>
+	<string.h>
+
+1361025617 source:/media/Data/james/Programming/carnivores_2/engine/gl_extra.cpp
+	"gl_extra.h"
+	<string.h>
+
+1361007348 source:/media/Data/james/Programming/carnivores_2/engine/mathematics.cpp
+	"Hunt.h"
+	<time.h>
+	<stdint.h>
+	<memory.h>
+
+1361015669 /media/Data/james/Programming/carnivores_2/engine/Platform.h
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+
+1362138546 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/Audio_DLL.cpp
+	"Hunt.h"
+	"pcmLib.h"
+	<windows.h>
+
+1366629958 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/Characters.cpp
+	"Hunt.h"
+	<stdio.h>
+	"AI.h"
+
+1366628650 /media/Data/james/Programming/carnivores_2/carncollect/engine/Hunt.h
+	<math.h>
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+	<GL/glew.h>
+	<GL/glxew.h>
+	<GL/glfw.h>
+	"Platform.h"
+	"Globals.h"
+	"ImageTypes.h"
+	"resource.h"
+	"version.h"
+	<assert.h>
+	"AI.h"
+
+1344268747 /media/Data/james/Programming/carnivores_2/carncollect/engine/glew/glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1344268747 /media/Data/james/Programming/carnivores_2/carncollect/engine/glew/glxew.h
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/Xmd.h>
+	<GL/glew.h>
+
+1364387576 /media/Data/james/Programming/carnivores_2/carncollect/engine/Globals.h
+
+1364387576 /media/Data/james/Programming/carnivores_2/carncollect/engine/ImageTypes.h
+	<stdint.h>
+
+1364387576 /media/Data/james/Programming/carnivores_2/carncollect/engine/resource.h
+
+1364387576 /media/Data/james/Programming/carnivores_2/carncollect/engine/AI.h
+
+1364387576 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/Game.cpp
+	"Hunt.h"
+	<stdio.h>
+	<time.h>
+	<string.h>
+
+1366235982 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/Hunt2.cpp
+	"Hunt.h"
+	<stdio.h>
+	"VideoOptions.h"
+	"IniFile.h"
+	<math.h>
+	<time.h>
+	<stdint.h>
+	<string.h>
+	"Log.h"
+	"Controller.h"
+
+1364387576 /media/Data/james/Programming/carnivores_2/carncollect/engine/VideoOptions.h
+
+1364387576 /media/Data/james/Programming/carnivores_2/carncollect/engine/IniFile.h
+	<string>
+	<vector>
+
+1364387576 /media/Data/james/Programming/carnivores_2/carncollect/engine/Log.h
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+
+1364387576 /media/Data/james/Programming/carnivores_2/carncollect/engine/Controller.h
+
+1364387576 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/IniFile.cpp
+	"IniFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1366235666 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/Interface.cpp
+	"Hunt.h"
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	"gl_extra.h"
+
+1364387576 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/Menu.cpp
+	"Hunt.h"
+
+1364387576 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/Netcode.cpp
+	"Hunt.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<vector>
+
+1364387576 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/RenderGL.cpp
+	"IniFile.h"
+	"gl_extra.h"
+	"Platform.h"
+	<stdio.h>
+	<vector>
+
+1364387576 /media/Data/james/Programming/carnivores_2/carncollect/engine/gl_extra.h
+	"Hunt.h"
+	<assert.h>
+	<stdio.h>
+	"VideoOptions.h"
+
+1366609041 /media/Data/james/Programming/carnivores_2/carncollect/engine/Platform.h
+	<string.h>
+	<stdio.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<X11/Xlib.h>
+
+1366628672 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/Resources.cpp
+	"Hunt.h"
+	"ImageTypes.h"
+	<stdio.h>
+	<string.h>
+	"gl_extra.h"
+
+1366261184 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/gl_extra.cpp
+	"gl_extra.h"
+	<string.h>
+
+1364387576 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/mathematics.cpp
+	"Hunt.h"
+	<time.h>
+	<stdint.h>
+	<memory.h>
+
+1361754564 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/ALSA.cpp
+	"ALSA.h"
+
+1361754167 /media/Data/james/Programming/carnivores_2/carncollect/engine/ALSA.h
+	<alsa/asoundlib.h>
+
+1361754167 ndlib.h>
+
+1364387576 /media/Data/james/Programming/carnivores_2/carncollect/engine/version.h
+
+1366627429 /media/Data/james/Programming/carnivores_2/carncollect/engine/pcmLib.h
+	<alsa/asoundlib.h>
+	<mmsystem.h>
+	<stdint.h>
+
+1366635180 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/pcmLib.cpp
+	"pcmLib.h"
+	<stdio.h>
+	<stdint.h>
+
+1366628614 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/Audio.cpp
+	"Hunt.h"
+	"pcmLib.h"
+	<pthread.h>
+	<Windows.h>
+
+1362141468 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/IniFile.cpp
+	"IniFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1362141474 /media/Data/zane/Desktop/carnivores/carncollect/engine/IniFile.h
+	<string>
+	<vector>
+
+1362395770 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/Interface.cpp
+	"Hunt.h"
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	"gl_extra.h"
+
+1362395818 /media/Data/zane/Desktop/carnivores/carncollect/engine/Hunt.h
+	<math.h>
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+	<GL/glew.h>
+	<GL/glxew.h>
+	<GL/glfw.h>
+	"Platform.h"
+	"Globals.h"
+	"ImageTypes.h"
+	"resource.h"
+	"version.h"
+	<assert.h>
+	"AI.h"
+
+1362141474 /media/Data/zane/Desktop/carnivores/carncollect/engine/Platform.h
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<X11/Xlib.h>
+
+1362141472 /media/Data/zane/Desktop/carnivores/carncollect/engine/Globals.h
+
+1362394161 /media/Data/zane/Desktop/carnivores/carncollect/engine/ImageTypes.h
+	<stdint.h>
+
+1362141472 /media/Data/zane/Desktop/carnivores/carncollect/engine/resource.h
+
+1362141572 /media/Data/zane/Desktop/carnivores/carncollect/engine/version.h
+
+1362141468 /media/Data/zane/Desktop/carnivores/carncollect/engine/AI.h
+
+1362141472 /media/Data/zane/Desktop/carnivores/carncollect/engine/gl_extra.h
+	"Hunt.h"
+	<assert.h>
+	<stdio.h>
+	"VideoOptions.h"
+
+1362141474 /media/Data/zane/Desktop/carnivores/carncollect/engine/VideoOptions.h
+
+1362141472 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/Menu.cpp
+	"Hunt.h"
+
+1362141474 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/Netcode.cpp
+	"Hunt.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<vector>
+
+1362141468 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/gl_extra.cpp
+	"gl_extra.h"
+	<string.h>
+
+1362141472 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/mathematics.cpp
+	"Hunt.h"
+	<time.h>
+	<stdint.h>
+	<memory.h>
+
+1362394161 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/Audio.cpp
+	"Hunt.h"
+	"pcmLib.h"
+	<pthread.h>
+	<Windows.h>
+
+1362394161 /media/Data/zane/Desktop/carnivores/carncollect/engine/pcmLib.h
+	<alsa/asoundlib.h>
+	<mmsystem.h>
+
+1362395682 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/Characters.cpp
+	"Hunt.h"
+	<stdio.h>
+	"AI.h"
+
+1362394161 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/Game.cpp
+	"Hunt.h"
+	<stdio.h>
+	<time.h>
+	<string.h>
+
+1362395742 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/Hunt2.cpp
+	"Hunt.h"
+	<stdio.h>
+	"VideoOptions.h"
+	"IniFile.h"
+	<math.h>
+	<time.h>
+	<stdint.h>
+	<string.h>
+	"Log.h"
+	"Controller.h"
+
+1362141468 /media/Data/zane/Desktop/carnivores/carncollect/engine/Log.h
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+
+1362141474 /media/Data/zane/Desktop/carnivores/carncollect/engine/Controller.h
+
+1362394161 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/RenderGL.cpp
+	"IniFile.h"
+	"gl_extra.h"
+	"Platform.h"
+	<stdio.h>
+	<vector>
+
+1362394161 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/pcmLib.cpp
+	"pcmLib.h"
+	<stdio.h>
+	<stdint.h>
+
+1362394237 source:/media/Data/zane/Desktop/carnivores/carncollect/engine/Resources.cpp
+	"Hunt.h"
+	<stdio.h>
+	<string.h>
+
+1365495200 source:/media/Data/james/Programming/carnivores_2/carncollect/engine/Network.cpp
+	"Platform.h"
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<WinSock2.h>
+	<Ws2tcpip.h>
+
+1380265947 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/Audio.cpp
+	"Hunt.h"
+
+1380347193 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/Hunt.h
+	<math.h>
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+	<GL/glew.h>
+	<GL/glxew.h>
+	<GL/glfw.h>
+	<GL/glew.h>
+	<GL/wglew.h>
+	<GL/glfw.h>
+	"Platform.h"
+	"Globals.h"
+	"ImageTypes.h"
+	"resource.h"
+	"version.h"
+	"AudioAL.h"
+	<assert.h>
+	"AI.h"
+
+1379468998 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/Platform.h
+	<string.h>
+	<stdio.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<X11/Xlib.h>
+
+1364423576 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/Globals.h
+
+1379464404 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/ImageTypes.h
+	<stdint.h>
+
+1364423576 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/resource.h
+
+1364423576 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/version.h
+
+1364423576 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/AI.h
+
+1367396146 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/pcmLib.h
+	<stdio.h>
+	<stdint.h>
+
+1380377932 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/Characters.cpp
+	"Hunt.h"
+	<stdio.h>
+	"AI.h"
+
+1380352168 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/Game.cpp
+	"Hunt.h"
+	<stdio.h>
+	<time.h>
+	<string.h>
+
+1379890671 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/gl_extra.cpp
+	"gl_extra.h"
+	<string.h>
+
+1364423576 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/gl_extra.h
+	"Hunt.h"
+	<assert.h>
+	<stdio.h>
+	"VideoOptions.h"
+
+1364423576 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/VideoOptions.h
+
+1380376398 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/Hunt2.cpp
+	"Hunt.h"
+	<stdio.h>
+	"VideoOptions.h"
+	"IniFile.h"
+	<math.h>
+	<time.h>
+	<stdint.h>
+	<string.h>
+	"Log.h"
+	"Controller.h"
+
+1380265696 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/IniFile.h
+	<string>
+	<vector>
+
+1364423576 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/Log.h
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+
+1364423576 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/Controller.h
+
+1380265791 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/IniFile.cpp
+	"IniFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1380265300 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/Interface.cpp
+	"Hunt.h"
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	"gl_extra.h"
+
+1380265814 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/mathematics.cpp
+	"Hunt.h"
+	<time.h>
+	<stdint.h>
+	<memory.h>
+
+1364423576 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/Menu.cpp
+	"Hunt.h"
+
+1379464404 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/Netcode.cpp
+	"Hunt.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<vector>
+	<sys/socket.h>
+	<netinet/in.h>
+	<WinSock2.h>
+
+1379464404 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/Network.cpp
+	"Platform.h"
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<WinSock2.h>
+	<Ws2tcpip.h>
+
+1379976034 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/pcmLib.cpp
+	"pcmLib.h"
+	<alsa/asoundlib.h>
+	<Windows.h>
+	<mmsystem.h>
+	<ObjBase.h>
+
+1379890913 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/RenderGL.cpp
+	"IniFile.h"
+	"gl_extra.h"
+	"Platform.h"
+	<stdio.h>
+	<vector>
+
+1380359847 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/Resources.cpp
+	"Hunt.h"
+	"ImageTypes.h"
+	<stdio.h>
+	<string.h>
+	"gl_extra.h"
+
+1380352616 /data/coolbreeze/Programming/carnivores_2/carncollect/engine/AudioAL.h
+	<stdint.h>
+	<cstdio>
+	<vector>
+
+1380377827 source:/data/coolbreeze/Programming/carnivores_2/carncollect/engine/AudioAL.cpp
+	"AudioAL.h"
+	<AL/al.h>
+	<AL/alc.h>
+	<vector>
+
+1380265946 source:t:\programming\carnivores_2\engine\audio.cpp
+	"Hunt.h"
+
+1380347192 t:\programming\carnivores_2\engine\hunt.h
+	<math.h>
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+	<GL/glew.h>
+	<GL/glxew.h>
+	<GL/glfw.h>
+	<GL/glew.h>
+	<GL/wglew.h>
+	<GL/glfw.h>
+	"Platform.h"
+	"Globals.h"
+	"ImageTypes.h"
+	"resource.h"
+	"version.h"
+	"AudioAL.h"
+	<assert.h>
+	"AI.h"
+
+1379468998 t:\programming\carnivores_2\engine\platform.h
+	<string.h>
+	<stdio.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<X11/Xlib.h>
+
+1364419976 t:\programming\carnivores_2\engine\globals.h
+
+1379464404 t:\programming\carnivores_2\engine\imagetypes.h
+	<stdint.h>
+
+1364419976 t:\programming\carnivores_2\engine\resource.h
+
+1364419976 t:\programming\carnivores_2\engine\version.h
+
+1380445783 t:\programming\carnivores_2\engine\audioal.h
+	<stdint.h>
+	<cstdio>
+	<vector>
+
+1364419976 t:\programming\carnivores_2\engine\ai.h
+
+1380445947 source:t:\programming\carnivores_2\engine\audioal.cpp
+	"AudioAL.h"
+	<AL/al.h>
+	<AL/alc.h>
+	<vector>
+
+1380422302 source:t:\programming\carnivores_2\engine\characters.cpp
+	"Hunt.h"
+	<stdio.h>
+	"AI.h"
+
+1380352168 source:t:\programming\carnivores_2\engine\game.cpp
+	"Hunt.h"
+	<stdio.h>
+	<time.h>
+	<string.h>
+
+1380376398 source:t:\programming\carnivores_2\engine\hunt2.cpp
+	"Hunt.h"
+	<stdio.h>
+	"VideoOptions.h"
+	"IniFile.h"
+	<math.h>
+	<time.h>
+	<stdint.h>
+	<string.h>
+	"Log.h"
+	"Controller.h"
+
+1364419976 t:\programming\carnivores_2\engine\videooptions.h
+
+1380265696 t:\programming\carnivores_2\engine\inifile.h
+	<string>
+	<vector>
+
+1364419976 t:\programming\carnivores_2\engine\log.h
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+
+1364419976 t:\programming\carnivores_2\engine\controller.h
+
+1380265790 source:t:\programming\carnivores_2\engine\inifile.cpp
+	"IniFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1380265300 source:t:\programming\carnivores_2\engine\interface.cpp
+	"Hunt.h"
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	"gl_extra.h"
+
+1364419976 t:\programming\carnivores_2\engine\gl_extra.h
+	"Hunt.h"
+	<assert.h>
+	<stdio.h>
+	"VideoOptions.h"
+
+1380265814 source:t:\programming\carnivores_2\engine\mathematics.cpp
+	"Hunt.h"
+	<time.h>
+	<stdint.h>
+	<memory.h>
+
+1364419976 source:t:\programming\carnivores_2\engine\menu.cpp
+	"Hunt.h"
+
+1379464404 source:t:\programming\carnivores_2\engine\netcode.cpp
+	"Hunt.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<vector>
+	<sys/socket.h>
+	<netinet/in.h>
+	<WinSock2.h>
+
+1379464404 source:t:\programming\carnivores_2\engine\network.cpp
+	"Platform.h"
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<WinSock2.h>
+	<Ws2tcpip.h>
+
+1379890912 source:t:\programming\carnivores_2\engine\rendergl.cpp
+	"IniFile.h"
+	"gl_extra.h"
+	"Platform.h"
+	<stdio.h>
+	<vector>
+
+1380426767 source:t:\programming\carnivores_2\engine\resources.cpp
+	"Hunt.h"
+	"ImageTypes.h"
+	<stdio.h>
+	<string.h>
+	"gl_extra.h"
+
+1380425804 source:t:\programming\carnivores_2\engine\gl_extra.cpp
+	"gl_extra.h"
+	<string.h>
+
+1380450644 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/Audio.cpp
+	"Hunt.h"
+
+1380450645 /data/coolbreeze/Programming/carnivores_2/trunk/engine/Hunt.h
+	<math.h>
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+	<GL/glew.h>
+	<GL/glxew.h>
+	<GL/glfw.h>
+	<GL/glew.h>
+	<GL/wglew.h>
+	<GL/glfw.h>
+	"Platform.h"
+	"Globals.h"
+	"ImageTypes.h"
+	"resource.h"
+	"version.h"
+	"AudioAL.h"
+	<assert.h>
+	"AI.h"
+
+1380450645 /data/coolbreeze/Programming/carnivores_2/trunk/engine/Platform.h
+	<string.h>
+	<stdio.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<X11/Xlib.h>
+
+1380450644 /data/coolbreeze/Programming/carnivores_2/trunk/engine/Globals.h
+
+1380450644 /data/coolbreeze/Programming/carnivores_2/trunk/engine/ImageTypes.h
+	<stdint.h>
+
+1380450644 /data/coolbreeze/Programming/carnivores_2/trunk/engine/resource.h
+
+1380450645 /data/coolbreeze/Programming/carnivores_2/trunk/engine/version.h
+
+1380450645 /data/coolbreeze/Programming/carnivores_2/trunk/engine/AudioAL.h
+	<stdint.h>
+	<cstdio>
+	<vector>
+
+1380450644 /data/coolbreeze/Programming/carnivores_2/trunk/engine/AI.h
+
+1380497320 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/Characters.cpp
+	"Hunt.h"
+	<stdio.h>
+	"AI.h"
+
+1380450644 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/Game.cpp
+	"Hunt.h"
+	<stdio.h>
+	<time.h>
+	<string.h>
+
+1380450644 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/Hunt2.cpp
+	"Hunt.h"
+	<stdio.h>
+	"VideoOptions.h"
+	"IniFile.h"
+	<math.h>
+	<time.h>
+	<stdint.h>
+	<string.h>
+	"Log.h"
+	"Controller.h"
+
+1380450645 /data/coolbreeze/Programming/carnivores_2/trunk/engine/VideoOptions.h
+
+1380450645 /data/coolbreeze/Programming/carnivores_2/trunk/engine/IniFile.h
+	<string>
+	<vector>
+
+1380450644 /data/coolbreeze/Programming/carnivores_2/trunk/engine/Log.h
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+
+1380450645 /data/coolbreeze/Programming/carnivores_2/trunk/engine/Controller.h
+
+1380450644 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/IniFile.cpp
+	"IniFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1380450644 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/Interface.cpp
+	"Hunt.h"
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	"gl_extra.h"
+
+1380450644 /data/coolbreeze/Programming/carnivores_2/trunk/engine/gl_extra.h
+	"Hunt.h"
+	<assert.h>
+	<stdio.h>
+	"VideoOptions.h"
+
+1380450644 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/mathematics.cpp
+	"Hunt.h"
+	<time.h>
+	<stdint.h>
+	<memory.h>
+
+1380450644 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/Menu.cpp
+	"Hunt.h"
+
+1380450645 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/Netcode.cpp
+	"Hunt.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<vector>
+	<sys/socket.h>
+	<netinet/in.h>
+	<WinSock2.h>
+
+1380450644 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/Network.cpp
+	"Platform.h"
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<WinSock2.h>
+	<Ws2tcpip.h>
+
+1380450644 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/RenderGL.cpp
+	"IniFile.h"
+	"gl_extra.h"
+	"Platform.h"
+	<stdio.h>
+	<vector>
+
+1380450644 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/Resources.cpp
+	"Hunt.h"
+	"ImageTypes.h"
+	<stdio.h>
+	<string.h>
+	"gl_extra.h"
+
+1380493823 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/AudioAL.cpp
+	"AudioAL.h"
+	<AL/al.h>
+	<AL/alc.h>
+	<vector>
+
+1380463462 source:/data/coolbreeze/Programming/carnivores_2/trunk/engine/gl_extra.cpp
+	"gl_extra.h"
+	<string.h>
+
