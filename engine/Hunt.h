@@ -10,7 +10,7 @@
 #if defined( AF_PLATFORM_LINUX )
 #	include <GL/glew.h>
 #	include <GL/glxew.h>
-#	include <GL/glfw.h>
+#	include <GLFW/glfw3.h>
 /* Dummy Defines */
 #	define HDC int
 #	define HANDLE void*
@@ -311,6 +311,11 @@ typedef struct vec2i
 {
 	int32_t x,y;
 } vec2i;
+
+typedef struct vec2d
+{
+	double x,y;
+} vec2d;
 
 class Vector2df
 {
@@ -929,7 +934,7 @@ _EXTORNOT   int   TotalC, TotalW;
 //========== common ==================//
 
 _EXTORNOT   bool    blActive;
-_EXTORNOT   uint8_t    KeyboardState[256];
+_EXTORNOT   uint8_t KeyboardState[256];
 _EXTORNOT   int     KeyFlags, _shotcounter;
 
 _EXTORNOT   TMessageList MessageList[32];
@@ -1034,6 +1039,7 @@ _EXTORNOT TPlayer        Players[16];
 _EXTORNOT vec3       PlayerPos, CameraPos;
 
 //========== Render ==================//
+_EXTORNOT   GLFWwindow* GWindow;
 _EXTORNOT   void* lpVideoRAM;
 _EXTORNOT   bool DirectActive, RestartMode;
 _EXTORNOT   bool LoDetailSky;

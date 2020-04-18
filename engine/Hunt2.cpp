@@ -72,8 +72,8 @@ int  iDevCount = strlen(cDevConsole);
 
 void HideWeapon();
 
-void GLFWCALL KeyboardInput( int key, int action );
-void GLFWCALL CharacterInput( int, int );
+void KeyboardInput( GLFWwindow *window, int key, int scancode, int action, int mods );
+void CharacterInput( int, int );
 
 
 
@@ -91,11 +91,14 @@ float fThumbRY = 0;
 
 void InitXboxController()
 {
-	if ( glfwGetJoystickParam( GLFW_JOYSTICK_1, GLFW_PRESENT ) )
+	if ( glfwJoystickPresent( GLFW_JOYSTICK_1 ) )
 	{
 		printf( "There is a joystick!\n" );
-		printf( "\tNumber of Axes: %d\n", glfwGetJoystickParam( GLFW_JOYSTICK_1, GLFW_AXES ) );
-		printf( "\tNumber of Buttons: %d\n", glfwGetJoystickParam( GLFW_JOYSTICK_1, GLFW_BUTTONS ) );
+		int count = 0;
+        glfwGetJoystickAxes( GLFW_JOYSTICK_1, &count );
+		printf( "\tNumber of Axes: %d\n", count );
+		glfwGetJoystickButtons( GLFW_JOYSTICK_1, &count );
+		printf( "\tNumber of Buttons: %d\n", &count );
 	}
 }
 
@@ -103,11 +106,11 @@ void InitXboxController()
 uint32_t UpdateControllerState()
 {
 	memcpy( gController.lastState, gController.state, sizeof(uint8_t)*20 );
-	int retCount = glfwGetJoystickButtons( GLFW_JOYSTICK_1, gController.state, 20 );
-	int retAxes = glfwGetJoystickPos( GLFW_JOYSTICK_1, gController.m_axes, 10 );
+	//int retCount = glfwGetJoystickButtons( GLFW_JOYSTICK_1, gController.state, 20 );
+	//int retAxes = glfwGetJoystickPos( GLFW_JOYSTICK_1, gController.m_axes, 10 );
 
 	// Connect/Disconnect status
-	if ( glfwGetJoystickParam( GLFW_JOYSTICK_1, GLFW_PRESENT ) )
+	if ( glfwJoystickPresent( GLFW_JOYSTICK_1 ) )
 	{
 		if ( !gController.bConnected ) printf( "Gamepad 1 Connected!\n" );
 		gController.bConnected = true;
@@ -350,7 +353,7 @@ void ControllerRelease()
 void ResetMousePos()
 {
 	//SetCursorPos( WindowCX, WindowCY );
-	glfwSetMousePos( WindowCX, WindowCY );
+	glfwSetCursorPos( GWindow, WindowCX, WindowCY );
 }
 
 
@@ -970,7 +973,7 @@ SKIPWEAPON:
 	if (g->BINMODE || g->OPTICMODE) goto SKIPWIND;
 
 	if (!TrophyMode)
-		if ( !glfwGetKey( GLFW_KEY_CAPS_LOCK) )
+		if ( !glfwGetKey( GWindow, GLFW_KEY_CAPS_LOCK) )
 		{
 			bool lr = g->LOWRESTX;
 			g->LOWRESTX = true;
@@ -1176,7 +1179,6 @@ void ToggleCrouchMode()
 	else AddMessage("Crouch mode is OFF");
 }
 
-
 void ToggleMapMode()
 {
 	if (!MyHealth) return;
@@ -1184,9 +1186,6 @@ void ToggleMapMode()
 	if (Weapon.state) return;
 	g->MapMode = !g->MapMode;
 }
-
-
-
 
 void ShowShifts()
 {
@@ -1229,8 +1228,6 @@ void ShowShifts()
 	return 0;
 }*/
 
-
-
 /* This is called very early on, so any initialisation to do with a window or interface elements can come in here */
 bool CreateMainWindow()
 {
@@ -1243,33 +1240,36 @@ bool CreateMainWindow()
 	}
 
 #ifdef _DEBUG
-	int window_mode = GLFW_WINDOW;
+	bool fullscreen_mode = false;
 #else
-	int window_mode = GLFW_FULLSCREEN;
+	bool fullscreen_mode = true;
 #endif
-	glfwOpenWindowHint( GLFW_OPENGL_VERSION_MAJOR, 2 );
-	glfwOpenWindowHint( GLFW_OPENGL_VERSION_MINOR, 1 );
+	glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 2 );
+	glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 1 );
 	//glfwOpenWindowHint( GLFW_FSAA_SAMPLES, 2 );
 
-	if ( Windowed )
-	{
-		window_mode = GLFW_WINDOW;
-	}
+	if ( Windowed ) fullscreen_mode = false;
 
 	// -- Get the size of the screen
 	vec2i screen;
 	GetScreenSize( &screen.x, &screen.y );
 
-	if ( glfwOpenWindow( WinW,WinH, 8,8,8,0, 24, 0, window_mode ) != GL_TRUE )
+	glfwWindowHint(GLFW_DEPTH_BITS, 24);
+	if ( fullscreen_mode )
+		GWindow = glfwCreateWindow( WinW, WinH, "AtmosFEAR Renderer", glfwGetPrimaryMonitor(), nullptr);
+    else
+        GWindow = glfwCreateWindow( WinW, WinH, "AtmosFEAR Renderer", nullptr, nullptr);
+
+	if ( GWindow == nullptr )
 	{
 		PrintLog( "Failed to open/create the requested window interface!\n" );
 		return false;
 	}
 
-	glfwSetWindowTitle( "AtmosFEAR Renderer" );
+	//glfwSetWindowTitle( GWindow, "AtmosFEAR Renderer" );
 
-	glfwSetKeyCallback( KeyboardInput );
-	glfwSetCharCallback( CharacterInput );
+	glfwSetKeyCallback( GWindow, KeyboardInput );
+	//glfwSetCharCallback( GWindow, CharacterInput );
 
 	PrintLog("Ok.\n\n");
 
@@ -1279,14 +1279,6 @@ bool CreateMainWindow()
 
 	return true;
 }
-
-
-
-
-
-
-
-
 
 bool ProcessShoot()
 {
@@ -1457,14 +1449,15 @@ void ProcessSlide()
         void ProcessPlayerMovement()
         {
             if (bDevShow) return;
-            vec2i ms,rc;
+            vec2i rc;
+            vec2d ms;
 
-            glfwGetWindowSize( &rc.x, &rc.y );
+            glfwGetWindowSize( GWindow, &rc.x, &rc.y );
 
             WindowCX = rc.x / 2;
             WindowCY = rc.y / 2;
 
-			glfwGetMousePos( &ms.x, &ms.y );
+			glfwGetCursorPos( GWindow, &ms.x, &ms.y );
             //GetCursorPos(&ms);
 
             if (!g->REVERSEMS) ms.y = -ms.y+VideoCY*2;
@@ -1541,13 +1534,13 @@ void ProcessSlide()
                 if (PlayerSpeed <-0.2f) PlayerSpeed =-0.2f;
             }
 
-            if ( glfwGetMouseButton( GLFW_MOUSE_BUTTON_1 ) )//KeyboardState [KeyMap.fkFire] & 128)
+            if ( glfwGetMouseButton( GWindow, GLFW_MOUSE_BUTTON_1 ) )//KeyboardState [KeyMap.fkFire] & 128)
             {
                 ProcessShoot();
             }
 
 
-            if ( glfwGetMouseButton( GLFW_MOUSE_BUTTON_2 ) )//KeyboardState [KeyMap.fkShow] & 128)
+            if ( glfwGetMouseButton( GWindow, GLFW_MOUSE_BUTTON_2 ) )//KeyboardState [KeyMap.fkShow] & 128)
                 HideWeapon();
 
             if (g->BINMODE)
@@ -1560,7 +1553,7 @@ void ProcessSlide()
 
             // === Make animal call === //
             //if (KeyFlags & kfCall)
-            if ( glfwGetKey( GLFW_KEY_LALT ) == GLFW_PRESS )
+            if ( glfwGetKey( GWindow, GLFW_KEY_LEFT_ALT ) == GLFW_PRESS )
             {
                 MakeCall();
             }
@@ -1568,7 +1561,7 @@ void ProcessSlide()
             if (g->DEBUG)
             {
 
-                if ( glfwGetKey( GLFW_KEY_LCTRL ) )
+                if ( glfwGetKey( GWindow, GLFW_KEY_LEFT_CONTROL ) )
                     if (KeyFlags & kfBackward) VSpeed =-8;
                     else VSpeed = 8;
 
@@ -1757,32 +1750,32 @@ void ProcessSlide()
             //End -> Xbox Controller
 
 
-            if ( glfwGetKey (KeyMap.fkStrafe) ) KeyFlags+=kfStrafe;
+            if ( glfwGetKey (GWindow, KeyMap.fkStrafe) ) KeyFlags+=kfStrafe;
 
-            if ( glfwGetKey (KeyMap.fkForward ) ) KeyFlags+=kfForward;
-            if ( glfwGetKey (KeyMap.fkBackward) ) KeyFlags+=kfBackward;
+            if ( glfwGetKey (GWindow, KeyMap.fkForward ) ) KeyFlags+=kfForward;
+            if ( glfwGetKey (GWindow, KeyMap.fkBackward) ) KeyFlags+=kfBackward;
 
-            if ( glfwGetKey (KeyMap.fkUp   ) )  KeyFlags+=kfLookUp;
-            if ( glfwGetKey (KeyMap.fkDown ) )  KeyFlags+=kfLookDn;
+            if ( glfwGetKey (GWindow, KeyMap.fkUp   ) )  KeyFlags+=kfLookUp;
+            if ( glfwGetKey (GWindow, KeyMap.fkDown ) )  KeyFlags+=kfLookDn;
 
             if (KeyFlags & kfStrafe)
             {
-                if ( glfwGetKey (KeyMap.fkLeft ) )  KeyFlags+=kfSLeft;
-                if ( glfwGetKey (KeyMap.fkRight) ) KeyFlags+=kfSRight;
+                if ( glfwGetKey (GWindow, KeyMap.fkLeft ) )  KeyFlags+=kfSLeft;
+                if ( glfwGetKey (GWindow, KeyMap.fkRight) ) KeyFlags+=kfSRight;
             }
             else
             {
-                if ( glfwGetKey(KeyMap.fkLeft ) )  KeyFlags+=kfLeft;
-                if ( glfwGetKey(KeyMap.fkRight) ) KeyFlags+=kfRight;
+                if ( glfwGetKey(GWindow, KeyMap.fkLeft ) )  KeyFlags+=kfLeft;
+                if ( glfwGetKey(GWindow, KeyMap.fkRight) ) KeyFlags+=kfRight;
             }
 
-            if ( glfwGetKey(KeyMap.fkSLeft)  ) KeyFlags+=kfSLeft;
-            if ( glfwGetKey(KeyMap.fkSRight) ) KeyFlags+=kfSRight;
+            if ( glfwGetKey(GWindow, KeyMap.fkSLeft)  ) KeyFlags+=kfSLeft;
+            if ( glfwGetKey(GWindow, KeyMap.fkSRight) ) KeyFlags+=kfSRight;
 
 
-            if ( glfwGetKey(KeyMap.fkJump) ) KeyFlags+=kfJump;
+            if ( glfwGetKey(GWindow, KeyMap.fkJump) ) KeyFlags+=kfJump;
 
-            if ( glfwGetKey(KeyMap.fkCall) )
+            if ( glfwGetKey(GWindow, KeyMap.fkCall) )
                 if (!(_KeyFlags & kfCall)) KeyFlags+=kfCall;
 
             DeltaT = (float)TimeDt / 1000.f;
@@ -2353,7 +2346,7 @@ int main( int argc, char *argv[] )
 			}
 			else
 			{
-				glfwSleep( 1.0/1000.0); // Sleep for 1 second
+				usleep( 100000 ); // Sleep for 0,1 second
 			}
 		}
 	}
@@ -2365,7 +2358,7 @@ int main( int argc, char *argv[] )
 
 	ShutdownNetwork();
 	ShutDownEngine();
-	glfwEnable( GLFW_MOUSE_CURSOR );
+	glfwSetInputMode( GWindow, GLFW_CURSOR, GLFW_CURSOR_NORMAL );
 	PrintLog("Game normal shutdown.\n");
 
 	CloseLog();
@@ -2381,7 +2374,7 @@ main_badwindow:
 }
 
 
-void GLFWCALL CharacterInput( int key, int action )
+void CharacterInput( int key, int action )
 {
 	return;
 	if ( action == GLFW_PRESS )
@@ -2394,7 +2387,7 @@ void GLFWCALL CharacterInput( int key, int action )
 	}
 }
 
-void GLFWCALL KeyboardInput( int key, int action )
+void KeyboardInput( GLFWwindow *window, int key, int scancode, int action, int mods )
 {
     if ( action == GLFW_PRESS )
     {
@@ -2404,9 +2397,9 @@ void GLFWCALL KeyboardInput( int key, int action )
         if (key == KeyMap.fkBinoc && !bDevShow) ToggleBinocular();
         if (key == KeyMap.fkCCall && !bDevShow) ChangeCall();
         //if (key == KeyMap.fkSupply && !bDevShow) CallSupply();
-        if ( key == GLFW_KEY_RCTRL ) CallSupply();
+        if ( key == GLFW_KEY_RIGHT_CONTROL ) CallSupply();
         //if (key == KeyMap.fkRun    && !bDevShow)
-        if ( key == GLFW_KEY_LSHIFT ) ToggleRunMode();
+        if ( key == GLFW_KEY_LEFT_SHIFT ) ToggleRunMode();
         if (key == KeyMap.fkCrouch && !bDevShow) ToggleCrouchMode();
 
         if ( (key == GLFW_KEY_F1) || (key == 96) ) // VK_GRAVE == 192 GLFW_KEY_GRAVE == 96
@@ -2664,7 +2657,7 @@ END_CONSOLE:
 
             char v = key;
 
-            if ( !glfwGetKey( GLFW_KEY_LSHIFT ) ) v += 32;
+            if ( !glfwGetKey( GWindow, GLFW_KEY_LEFT_SHIFT ) ) v += 32;
 
             cDevConsole[iDevCount] = char( v );
             iDevCount++;
@@ -2682,7 +2675,7 @@ END_CONSOLE:
             cDevConsole[iDevCount] = char(key);
             iDevCount++;
         }
-        if ( key == int(189) && ( glfwGetKey( GLFW_KEY_LSHIFT ) ) )
+        if ( key == int(189) && ( glfwGetKey( GWindow, GLFW_KEY_LEFT_SHIFT ) ) )
         {
             if (!bDevShow) goto ENDKEYS;
             if (iDevCount>=256)
@@ -2731,7 +2724,7 @@ ENDKEYS:
     }
 
 
-	bool CTRL = ( glfwGetKey( GLFW_KEY_LSHIFT ) );
+	bool CTRL = ( glfwGetKey( GWindow, GLFW_KEY_LEFT_SHIFT ) );
 
 	if ( action == GLFW_PRESS )
 	switch (key)
@@ -2824,7 +2817,7 @@ ENDKEYS:
 		if (g->EXITMODE) g->EXITMODE = false;
 		break;
 
-	case GLFW_KEY_ESC:
+	case GLFW_KEY_ESCAPE:
 		if (TrophyMode)
 		{
 			SaveTrophy();

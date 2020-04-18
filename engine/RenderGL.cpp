@@ -1565,7 +1565,7 @@ void Activate3DHardware()
 
 	sprintf( logt, "\tResolution: %dx%d\n", WinW,WinH );
 	PrintLog( logt );
-	glfwSetWindowSize( WinW, WinH );
+	glfwSetWindowSize( GWindow, WinW, WinH );
 
 	// Go Fullscreen
 	if ( Windowed==false )
@@ -1582,7 +1582,7 @@ void Activate3DHardware()
 
 		int s_w, s_h;
 		GetScreenSize( &s_w, &s_h );
-		glfwSetWindowPos( (s_w-WinW)/2, (s_h-WinH)/2 );
+		glfwSetWindowPos( GWindow, (s_w-WinW)/2, (s_h-WinH)/2 );
 
 		bFullscreen = false;
 
@@ -1847,7 +1847,7 @@ void ShowVideo()
 #ifdef AF_DEBUG
 	//if ( g->GREMEDY ) glFrameTerminatorGREMEDY(); //<-For OpenGL Debugging.
 #endif
-	glfwSwapBuffers();
+	glfwSwapBuffers( GWindow );
 	oglClearBuffers();
 }
 

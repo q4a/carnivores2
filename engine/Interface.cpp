@@ -129,8 +129,8 @@ void DoHalt(const char* Mess)
 		MessageBox(NULL, Mess, "Carnivores Termination", MB_OK | MB_SYSTEMMODAL | MB_ICONEXCLAMATION);
 #endif
 		CloseLog();
-		glfwEnable( GLFW_MOUSE_CURSOR );
-		glfwCloseWindow();
+		glfwSetInputMode( GWindow, GLFW_CURSOR, GLFW_CURSOR_NORMAL );
+		glfwDestroyWindow( GWindow );
 		assert( false );
 	}
 	else
@@ -176,7 +176,7 @@ void UpdateLoadingWindow()
     Draw_Text( 19, LoadWall.m_height-22, loadtxt, 0xFF000000 );
     Draw_Text( 18, LoadWall.m_height-23, loadtxt, 0xFF70B0B0 );
 
-	glfwSwapBuffers();
+	glfwSwapBuffers( GWindow );
 	//glfwSleep( 1.0/2.0 );
 }
 
@@ -196,8 +196,8 @@ void StartLoading()
 
 	GetScreenSize( &s_w, &s_h );
 
-	glfwSetWindowPos( (s_w - LoadWall.m_width)/2, (s_h - LoadWall.m_height)/2 );
-	glfwSetWindowSize( LoadWall.m_width, LoadWall.m_height );
+	glfwSetWindowPos( GWindow, (s_w - LoadWall.m_width)/2, (s_h - LoadWall.m_height)/2 );
+	glfwSetWindowSize( GWindow, LoadWall.m_width, LoadWall.m_height );
 
 }
 
@@ -234,7 +234,7 @@ void SetVideoMode(int W, int H)
     CameraH = CameraW * (WinH * Aspect / WinW);
 
 	vec2i rc;
-	glfwGetWindowSize( &rc.x, &rc.y );
+	glfwGetWindowSize( GWindow, &rc.x, &rc.y );
 	WindowCX = rc.x / 2;
 	WindowCY = rc.y / 2;
 	ResetMousePos();
