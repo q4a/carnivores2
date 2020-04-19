@@ -1242,7 +1242,7 @@ bool CreateMainWindow()
 #ifdef _DEBUG
 	bool fullscreen_mode = false;
 #else
-	bool fullscreen_mode = true;
+	bool fullscreen_mode = false;//true;
 #endif
 	glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 2 );
 	glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 1 );
@@ -1254,6 +1254,8 @@ bool CreateMainWindow()
 	vec2i screen;
 	GetScreenSize( &screen.x, &screen.y );
 
+	WinW = 640;
+	WinH = 480;
 	glfwWindowHint(GLFW_DEPTH_BITS, 24);
 	if ( fullscreen_mode )
 		GWindow = glfwCreateWindow( WinW, WinH, "AtmosFEAR Renderer", glfwGetPrimaryMonitor(), nullptr);
@@ -2112,20 +2114,6 @@ SKIPYMOVE:
             CameraPos.z = CameraZ;
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 void ProcessGame()
 {

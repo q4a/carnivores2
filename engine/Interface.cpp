@@ -186,8 +186,8 @@ void StartLoading()
 {
 	//LoadPicture(LoadWall,   "HUNTDAT/MENU/LOADBANNER.BMP");
 
-    LoadPicture(LoadWall,   "HUNTDAT/MENU/LOADBANNER.TGA"); // 24-bit TARGA Loading Image
-    //LoadPicture(LoadWall,   "HUNTDAT/MENU/LOADING.TGA");
+    //LoadPicture(LoadWall,   "HUNTDAT/MENU/LOADBANNER.TGA"); // 24-bit TARGA Loading Image
+    LoadPicture(LoadWall,   "HUNTDAT/MENU/LOADING.TGA");
 
 	LoadWall.m_texid = oglCreateSprite( false, LoadWall );
 	gStateGLTextureBind = 0;
